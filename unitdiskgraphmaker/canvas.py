@@ -1,5 +1,5 @@
-from PyQt6.QtWidgets import QFrame
-from PyQt6.QtGui import (
+from PySide2.QtWidgets import QFrame
+from PySide2.QtGui import (
     QColorConstants,
     QPen,
     QPainter,
@@ -8,7 +8,7 @@ from PyQt6.QtGui import (
     QImage,
     QGradient,
 )
-from PyQt6.QtCore import Qt
+from PySide2.QtCore import Qt
 from point import Point
 
 import numpy as np
@@ -49,7 +49,7 @@ class SmartCanvas(QFrame):
         return None
 
     def world_point(self, event):
-        return Point(event.position().x(), event.position().y())
+        return Point(event.pos().x(), event.pos().y())
 
     def toggle_potential(self):
         if self.draw_potential:

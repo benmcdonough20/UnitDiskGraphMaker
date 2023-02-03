@@ -1,4 +1,4 @@
-from PyQt6.QtGui import QColorConstants, QColor
+from PySide2.QtGui import QColorConstants, QColor
 
 BGCOLOR = QColor("#333333")
 FGCOLOR = QColor("#444444")

@@ -1,15 +1,16 @@
-from PyQt6.QtWidgets import (
+from PySide2.QtWidgets import (
     QMainWindow,
     QToolBar,
     QFileDialog,
     QApplication,
     QPushButton,
+    QAction,
     QLabel,
 )
 from point import Point
 import sys
-from PyQt6.QtGui import QAction, QIcon
-from PyQt6.QtCore import QSize, Qt
+from PySide2.QtGui import QIcon
+from PySide2.QtCore import QSize, Qt
 
 from constants import *
 from canvas import SmartCanvas
@@ -118,4 +119,4 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setStyleSheet(open("../stylesheets/pyqt5-dark-theme.stylesheet").read())
     gui = CircuitGui()
-    app.exec()
+    app.exec_()
