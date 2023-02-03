@@ -84,7 +84,7 @@ class CircuitGui(QMainWindow):
             f.write("x,y\n")
             for atom in self.canvas.atoms:
                 f.write(
-                    f"{(atom.x-SCALE)/SCALE*RYDBERG_BLOCKADE},{(atom.y-SCALE)/SCALE*RYDBERG_BLOCKADE}\n"
+                    f"{round((atom.x-SCALE)/SCALE*RYDBERG_BLOCKADE,7)},{round((atom.y-SCALE)/SCALE*RYDBERG_BLOCKADE,7)}\n"
                 )
 
     def togglePotential(self):

@@ -44,7 +44,7 @@ class SmartCanvas(QFrame):
         for atom in self.atoms:
             if atom == exclude:
                 continue
-            if atom.dist(point) < SCALE * MIN_YSPACING:
+            if atom.dist(point) < ATOM_SIZE/2:
                 return atom
         return None
 
@@ -193,7 +193,7 @@ class SmartCanvas(QFrame):
     def mouseMoveEvent(self, event) -> None:
         mouseloc = self.world_point(event)
         if event.buttons() == Qt.MouseButton.LeftButton:  # left button drag
-            if not self._dragging:
+            if not self._dragging and self.dragging_atom:
                 self.updatePotential(self.dragging_atom, remove=True)
             if self.dragging_atom:
                 self._dragging = True
