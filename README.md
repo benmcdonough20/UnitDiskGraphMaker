@@ -40,4 +40,4 @@ of the Aquila processor,
 * Numpy 1.22.4
 
 ## Acknowledgements
-Thanks to Wyatt Kremer for giving me the inspiration for this GUI with his Desmos tool! Also thanks to my hackathon teammates Pranav Parakh, Alex Deters, and Sofia Fausone.
+Thanks to Wyatt Kremer for giving me the inspiration for this GUI with his Desmos tool! Also thanks to my other hackathon teammates Pranav Parakh, Alex Deters, and Sofia Fausone.
