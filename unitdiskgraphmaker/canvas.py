@@ -37,7 +37,7 @@ class SmartCanvas(QFrame):
         self.background = QImage("../images/background.png")
         self.old_pos = Point(0, 0)
 
-        self.draw_potential = True
+        self.draw_potential = False
         self.draw_links = True
 
     def atom_under(self, point, exclude=None):
@@ -203,7 +203,10 @@ class SmartCanvas(QFrame):
 
     def _drag(self, point):
         point.snap()
-        atom = self.atom_under(point, exclude=self.dragging_atom)
+        atom = None
+        for a in self.atoms:
+            if a.dist(point) < MIN_SPACING*SCALE and not a == self.dragging_atom:
+                atom = a 
         if self.dragging_atom and not atom:
             self.dragging_atom.moveto(point)
             self.dragging_atom.snap()

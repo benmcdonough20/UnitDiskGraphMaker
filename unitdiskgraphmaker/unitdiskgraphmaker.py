@@ -60,6 +60,7 @@ class CircuitGui(QMainWindow):
         togglePotential = QPushButton("", self)
         togglePotential.setIcon(QIcon("../icons/potential.png"))
         togglePotential.setCheckable(True)
+        togglePotential.setChecked(True)
         self.toolbar.addWidget(togglePotential)
         togglePotential.clicked.connect(self.togglePotential)
 
