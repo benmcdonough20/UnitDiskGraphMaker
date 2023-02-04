@@ -38,3 +38,6 @@ of the Aquila processor,
 * Python 3.10.9
 * PySide2 5.15.8
 * Numpy 1.22.4
+
+## Acknowledgements
+Thanks to Wyatt Kremer for giving me the inspiration for this GUI with his Desmos tool! Also thanks to my other hackathon teammates Pranav Parakh, Alex Deters, and Sofia Fausone.
