@@ -131,13 +131,22 @@ class SmartCanvas(QFrame):
         self.painter.end()
 
     def drawLinks(self):
-        connection = QPen(CONNECTION)
-        connection.setWidth(ATOM_SIZE)
-        connection.setCapStyle(Qt.PenCapStyle.RoundCap)
-        self.painter.setPen(connection)
         for i in range(len(self.atoms)):
             for j in range(i):
+                connection = QPen(CONNECTION)
+                connection.setWidth(ATOM_SIZE)
+                connection.setCapStyle(Qt.PenCapStyle.RoundCap)
+                self.painter.setPen(connection)
                 if self.atoms[i].dist(self.atoms[j]) < SCALE:
+                    self.painter.drawLine(
+                        int(self.atoms[i].x),
+                        int(self.atoms[i].y),
+                        int(self.atoms[j].x),
+                        int(self.atoms[j].y),
+                    )
+                    connection = QPen(QColor("#CEB3EF"))
+                    connection.setWidth(round(ATOM_SIZE/3))
+                    self.painter.setPen(connection)
                     self.painter.drawLine(
                         int(self.atoms[i].x),
                         int(self.atoms[i].y),
