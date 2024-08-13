@@ -1,6 +1,5 @@
-from PySide2.QtWidgets import QFrame
-from PySide2.QtGui import (
-    QColorConstants,
+from PyQt6.QtWidgets import QFrame
+from PyQt6.QtGui import (
     QPen,
     QPainter,
     QBrush,
@@ -8,7 +7,7 @@ from PySide2.QtGui import (
     QImage,
     QGradient,
 )
-from PySide2.QtCore import Qt
+from PyQt6.QtCore import Qt
 from point import Point
 
 import numpy as np
@@ -114,7 +113,7 @@ class SmartCanvas(QFrame):
 
         if self._dragging:
             self.painter.setBrush(Qt.BrushStyle.NoBrush)
-            self.painter.setPen(QPen(QColorConstants.White))
+            self.painter.setPen(QPen(QColor("FFFFFF")))
             self.painter.drawEllipse(
                 int(self.dragging_atom.x - SCALE),
                 int(self.dragging_atom.y - SCALE),

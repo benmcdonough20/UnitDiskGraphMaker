@@ -1,4 +1,4 @@
-from PySide2.QtGui import QColorConstants, QColor
+from PyQt6.QtGui import QColor
 
 BGCOLOR = QColor("#333333")
 FGCOLOR = QColor("#444444")
@@ -7,14 +7,14 @@ ACCENT1 = QColor("#FFFFFF")  # QColor("#FF505D")
 ACCENT2 = QColor("#6437FF")
 CONNECTION = QColor("#886437FF")
 POTENTIAL = QColor("#FFFFFF")
-ALERT = QColorConstants.Red
-LINECOLOR = QColorConstants.Black
+ALERT = QColor("FF0000")
+LINECOLOR = QColor("000000")
 
-ATOM_SIZE = 30
+ATOM_SIZE = 20
 WIRE_SIZE = 3
 
 RYDBERG_BLOCKADE = 6.1e-6  # in m
-SCALE = 60
+SCALE = 45
 MIN_YSPACING = 0.66
 MIN_SPACING = 0.66
 
